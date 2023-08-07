@@ -12,34 +12,53 @@ public class demo1{
         scanner.nextLine();
         assert (age >= 10 && age <= 18): "\033[31;1mInvalid age\033[0m";
 
-        System.out.print("Enter your subject1: ");
-        String subject1  = scanner.nextLine(); 
-        assert (subject1.substring(0, 3).equals("SE-")&& ((subject1.length()>=3) && !(subject1.substring(3, subject1.length())).strip().equals(""))):"\033[31;1mInvalid Subject\033[0m";// 
+      //  System.out.print("Enter your subject1: ");
+        //String subject1  = scanner.nextLine(); 
+       // assert (subject1.substring(0, 3).equals("SE-")&& ((subject1.length()>=3) && !(subject1.substring(3, subject1.length())).strip().equals(""))):"\033[31;1mInvalid Subject\033[0m";// 
        
         System.out.print("Enter your Marks1: ");
         double marks1 = scanner.nextDouble();
         scanner.nextLine();
         assert (marks1 >=0 && marks1 <= 100): "\033[31;1mInvalid marks1\033[0m";
 
-        System.out.print("Enter your subject2: ");
-        String subject2  = scanner.nextLine(); 
-        assert (subject2.substring(0, 3).equals("SE-")&& ((subject2.length()>=3) && !(subject2.substring(3, subject2.length())).strip().equals(""))):"\033[31;1mInvalid Subject\033[0m";// 
-        assert (!subject2.equals(subject1) ) : "\033[31;1mInvalid subject\033[0m";
+      //  System.out.print("Enter your subject2: ");
+       // String subject2  = scanner.nextLine(); 
+      //  assert (subject2.substring(0, 3).equals("SE-")&& ((subject2.length()>=3) && !(subject2.substring(3, subject2.length())).strip().equals(""))):"\033[31;1mInvalid Subject\033[0m";// 
+       // assert (!subject2.equals(subject1) ) : "\033[31;1mInvalid subject\033[0m";
 
         System.out.print("Enter your Marks2: ");
         double marks2 = scanner.nextDouble();
         scanner.nextLine();
         assert (marks2 >=0 && marks2 <= 100): "\033[31;1mInvalid marks2\033[0m";
 
-         System.out.print("Enter your subject3: ");
-        String subject3  = scanner.nextLine(); 
-        assert (subject3.substring(0, 3).equals("SE-")&& ((subject3.length()>=3) && !(subject3.substring(3, subject3.length())).strip().equals(""))):"\033[31;1mInvalid Subject\033[0m";// 
-        assert (!subject3.equals(subject1) && !subject3.equals(subject2)  ) : "\033[31;1mInvalid subject\033[0m";
+       //  System.out.print("Enter your subject3: ");
+       // String subject3  = scanner.nextLine(); 
+       // assert (subject3.substring(0, 3).equals("SE-")&& ((subject3.length()>=3) && !(subject3.substring(3, subject3.length())).strip().equals(""))):"\033[31;1mInvalid Subject\033[0m";// 
+       // assert (!subject3.equals(subject1) && !subject3.equals(subject2)  ) : "\033[31;1mInvalid subject\033[0m";
 
          System.out.print("Enter your Marks3: ");
         double marks3 = scanner.nextDouble();
         scanner.nextLine();
         assert (marks3 >=0 && marks3 <= 100): "\033[31;1mInvalid marks3\033[0m";
 
+        String finalname  = name.toUpperCase();
+        String finalage   = age + " years old";
+        double total = (marks1+marks2+marks3);
+        double avarage = total/3;
+        System.out.println(avarage);
+
+        String status = grade(avarage); 
+        
+
+    }
+    public static String grade(double marks)
+    {
+        String grade;
+        if (marks>=75) grade = "DP";
+        else if (marks>=65) grade = "CP";
+        else if (marks>=55) grade = "P";
+        else  grade = "F";
+
+        return grade;
     }
 }

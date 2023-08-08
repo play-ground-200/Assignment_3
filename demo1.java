@@ -47,13 +47,13 @@ public class demo1{
         double avarage = total/3;
         
 
-        String status = grade(avarage); 
         
         System.out.println("+---------------------------------------+");
-        System.out.printf("|  Name : \033[34;1m%-29s \033[0m|\n",finalname);
-        System.out.printf("|  Age : %-31s|\n",finalage);
-        System.out.printf("|  Status : %-37s|\n",grade(avarage) );
-        System.out.printf("|  Avarage : %-7.2f     Total : %-7.2f|\n",avarage,total );
+        System.out.printf("|%10s : \033[34;1m%-25s \033[0m|\n","Name",finalname);
+        System.out.printf("|%10s : %-26s|\n","Age",finalage);
+        System.out.printf("|%10s : %-35s|\n","Status",grade(avarage) );
+        System.out.printf("|%10s : %4.2f%-21s|\n","Avarage",avarage,"%");
+        System.out.printf("|%10s : %-26.2f|\n","Total",total);
         System.out.println("+------------+-------------+------------+");
         System.out.printf("| SE-%1$03d%4$-5s|  %2$-11.2f| %3$-20s|\n",Integer.parseInt(subject1.substring(3, subject1.length()).strip()),marks1,grade(marks1),"");
         System.out.printf("| SE-%1$03d%4$-5s|  %2$-11.2f| %3$-20s|\n",Integer.parseInt(subject2.substring(3, subject2.length()).strip()),marks2,grade(marks2),"");
